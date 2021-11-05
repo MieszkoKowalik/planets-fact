@@ -15,7 +15,7 @@ export const theme = {
   },
 
   fonts: {
-    primary: `'Spartan', sans-serif`,
-    secondary: `'Antonio', sans-serif`,
+    primary: `'Antonio', sans-serif`,
+    secondary: `'Spartan', sans-serif`,
   },
 };
