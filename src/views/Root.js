@@ -1,10 +1,14 @@
 import GlobalStyle from "assets/styles/globalStyle";
+import { ThemeProvider } from "styled-components";
+import { theme } from "assets/styles/theme";
 
 function Root() {
   return (
     <>
-      <GlobalStyle />
-      <p></p>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <p></p>
+      </ThemeProvider>
     </>
   );
 }
