@@ -1,15 +1,10 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.header`
-  a {
-    color: white;
-    display: block;
-  }
-`;
-
-export const Logo = styled.h1`
-  font-family: ${({ theme }) => theme.fonts.primary};
-  font-size: 28px;
-  color: ${({ theme }) => theme.colors.white};
-  letter-spacing: -0.0375em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.neutralDark};
+  position: relative;
 `;
