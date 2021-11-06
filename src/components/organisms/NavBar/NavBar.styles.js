@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.header``;
+export const Wrapper = styled.header`
+  a {
+    color: white;
+    display: block;
+  }
+`;
 
 export const Logo = styled.h1`
   font-family: ${({ theme }) => theme.fonts.primary};

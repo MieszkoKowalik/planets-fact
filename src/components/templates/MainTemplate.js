@@ -1,14 +1,13 @@
 import React from "react";
+
 import { Wrapper } from "./MainTemplate.styles";
-import Header from "components/organisms/Header/Header";
-import PlanetsSection from "components/organisms/PlanetsSection/PlanetsSection";
+import NavBar from "components/organisms/NavBar/NavBar";
 
 const MainTemplate = ({ children }) => {
   return (
     <Wrapper>
-      <Header />
+      <NavBar />
       {children}
-      <PlanetsSection />
     </Wrapper>
   );
 };
