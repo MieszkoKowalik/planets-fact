@@ -18,4 +18,9 @@ export const theme = {
     primary: `'Antonio', sans-serif`,
     secondary: `'Spartan', sans-serif`,
   },
+
+  media: {
+    medium: "(min-width:768px)",
+    large: "(min-width:1200px)",
+  },
 };

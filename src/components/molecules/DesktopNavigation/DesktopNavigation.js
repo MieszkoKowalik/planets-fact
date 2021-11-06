@@ -1,12 +1,12 @@
+import { PlanetsContext } from "providers/PlanetsProviders";
 import React from "react";
 import { useContext } from "react";
-import { PlanetsContext } from "providers/PlanetsProviders";
-import { Wrapper, StyledNavLink } from "./Navigation.styles";
-const Navigation = (props) => {
-  const planets = useContext(PlanetsContext);
+import { Wrapper, StyledNavLink } from "./DesktopNavigation.styles";
 
+const DesktopNavigation = () => {
+  const planets = useContext(PlanetsContext);
   return (
-    <Wrapper {...props}>
+    <Wrapper>
       {planets.map((planet) => (
         <li key={planet.name}>
           <StyledNavLink to={planet.name}>{planet.name}</StyledNavLink>
@@ -16,4 +16,4 @@ const Navigation = (props) => {
   );
 };
 
-export default Navigation;
+export default DesktopNavigation;

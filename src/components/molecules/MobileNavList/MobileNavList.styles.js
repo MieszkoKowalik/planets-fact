@@ -9,6 +9,7 @@ export const Wrapper = styled.ul`
   bottom: 0%;
   padding: 24px;
   transform: translateY(100%);
+  list-style: none;
 
   li:not(:last-of-type)::after {
     content: "";
@@ -29,6 +30,7 @@ export const StyledNavLink = styled(NavLink).attrs((props) => ({
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
+  letter-spacing: 0.09em;
   display: flex;
   align-items: center;
   &::before {
