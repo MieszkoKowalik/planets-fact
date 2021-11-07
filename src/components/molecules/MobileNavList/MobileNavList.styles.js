@@ -6,10 +6,12 @@ export const Wrapper = styled.ul`
   position: absolute;
   width: 100%;
   left: 0;
-  bottom: 0%;
+  bottom: -1px;
   padding: 24px;
   transform: translateY(100%);
   list-style: none;
+  z-index: 1000;
+  background-color: ${({ theme }) => theme.colors.primary};
 
   li:not(:last-of-type)::after {
     content: "";
