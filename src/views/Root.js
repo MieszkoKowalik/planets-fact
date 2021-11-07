@@ -14,7 +14,6 @@ function Root() {
           <MainTemplate>
             <Routes>
               <Route path=":planet/*" element={<PlanetsSection />} />
-              <Route path=":planet/:id" element={<PlanetsSection />} />
             </Routes>
           </MainTemplate>
         </PlanetsProvider>

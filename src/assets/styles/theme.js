@@ -2,8 +2,8 @@ export const theme = {
   colors: {
     white: "#FFFFFF",
     primary: "#070724",
-    neutralDark: "#38384F",
-    neutralLight: "#838391",
+    neutralDark: "#fff3",
+    neutralLight: "#fff8",
     mercury: "#419EBB",
     venus: "#EDA249",
     earth: "#6D2ED5",

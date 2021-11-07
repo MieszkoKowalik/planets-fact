@@ -1,11 +1,11 @@
-import { useParams } from "react-router";
 import React from "react";
-
+import Tabs from "components/molecules/Tabs/Tabs";
 const PlanetsSection = () => {
-  const planet = useParams();
-
-  console.log(planet);
-  return <></>;
+  return (
+    <>
+      <Tabs />
+    </>
+  );
 };
 
 export default PlanetsSection;
