@@ -26,7 +26,7 @@ const Tabs = () => {
 
   return (
     <Wrapper>
-      {!currentPath.view && <Navigate to="overview" />}
+      {!currentPath["*"] && <Navigate to="overview" />}
       {tabs.map((tab) => (
         <Tab
           key={tab.id}

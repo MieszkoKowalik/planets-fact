@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { PlanetsContext } from "providers/PlanetsProviders";
 import { Wrapper, StyledNavLink } from "./MobileNavList.styles";
 const MobileNavList = (props) => {
-  const planets = useContext(PlanetsContext);
+  const { planets } = useContext(PlanetsContext);
 
   return (
     <Wrapper {...props}>

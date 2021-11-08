@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { Wrapper, StyledNavLink } from "./DesktopNavigation.styles";
 
 const DesktopNavigation = () => {
-  const planets = useContext(PlanetsContext);
+  const { planets } = useContext(PlanetsContext);
   return (
     <Wrapper>
       {planets.map((planet) => (

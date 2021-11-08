@@ -2,16 +2,28 @@ import React from "react";
 import { useState, useEffect } from "react";
 export const PlanetsContext = React.createContext({
   planets: [],
+  currentPlanetData: {},
 });
 
 const PlanetsProvider = ({ children }) => {
   const [planets, setPlanets] = useState([]);
+  const [currentPlanetData, setCurrentPlanetData] = useState({});
+
+  const changeCurrentPlanet = (planetName) => {
+    const currentPlanetData = planets.find(
+      (planet) => planet.name.toLowerCase() === planetName
+    );
+
+    setCurrentPlanetData(currentPlanetData);
+  };
+
   useEffect(() => {
     fetch("/data/data.json")
       .then((response) => {
         return response.json();
       })
       .then((data) => {
+        console.log(data);
         setPlanets(data);
       })
       .catch((err) => {
@@ -19,7 +31,9 @@ const PlanetsProvider = ({ children }) => {
       });
   }, []);
   return (
-    <PlanetsContext.Provider value={planets}>
+    <PlanetsContext.Provider
+      value={{ planets, currentPlanetData, changeCurrentPlanet }}
+    >
       {children}
     </PlanetsContext.Provider>
   );
