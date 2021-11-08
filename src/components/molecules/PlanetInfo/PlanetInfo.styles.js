@@ -2,7 +2,6 @@ import styled from "styled-components";
 import SrcIcon from "assets/images/icon-source.svg";
 
 export const Wrapper = styled.div`
-  padding: 40px;
   text-align: center;
   display: flex;
   flex-direction: column;
