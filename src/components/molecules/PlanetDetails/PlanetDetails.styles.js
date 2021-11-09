@@ -1,20 +1,25 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
+  grid-area: details;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
   gap: 8px;
+  margin-top: 28px;
   @media ${({ theme }) => theme.media.medium} {
     flex-direction: row;
     justify-content: space-between;
     gap: 0;
   }
+  @media ${({ theme }) => theme.media.large} {
+    margin-top: 90px;
+  }
 `;
 export const Detail = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.neutralDark};
-  max-width: 255px;
+  max-width: 500px;
   width: 100%;
   padding: 16px 24px;
   display: flex;

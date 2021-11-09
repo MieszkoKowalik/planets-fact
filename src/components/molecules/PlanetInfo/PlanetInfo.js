@@ -1,12 +1,9 @@
 import React from "react";
 import { useContext } from "react";
-import { useParams } from "react-router";
 import { PlanetsContext } from "providers/PlanetsProviders";
 import { Wrapper } from "./PlanetInfo.styles";
 
 const PlanetInfo = () => {
-  const currentPlanet = useParams();
-  console.log(currentPlanet);
   const { currentPlanetData } = useContext(PlanetsContext);
 
   return (

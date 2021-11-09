@@ -3,18 +3,27 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 export const Wrapper = styled.div`
+  grid-area: tabs;
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 48px;
+  width: 100%;
   border-bottom: 1px solid ${({ theme }) => theme.colors.neutralDark};
 
   @media ${({ theme }) => theme.media.medium} {
     border: none;
     flex-direction: column;
     height: unset;
-    max-width: 350px;
+    width: 80%;
+    max-width: 370px;
     gap: 16px;
+    align-self: center;
+    justify-self: end;
+  }
+  @media ${({ theme }) => theme.media.large} {
+    max-width: unset;
+    width: 100%;
   }
 `;
 export const Tab = styled(NavLink).attrs(({ planet, id }) => ({ planet, id }))`

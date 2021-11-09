@@ -2,6 +2,7 @@ import styled from "styled-components";
 import SrcIcon from "assets/images/icon-source.svg";
 
 export const Wrapper = styled.div`
+  grid-area: info;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -10,6 +11,9 @@ export const Wrapper = styled.div`
   @media ${({ theme }) => theme.media.medium} {
     text-align: left;
     align-items: flex-start;
+  }
+  @media ${({ theme }) => theme.media.large} {
+    align-self: end;
   }
   h2 {
     margin-bottom: 16px;
@@ -43,7 +47,7 @@ export const Wrapper = styled.div`
     font-size: 12px;
     font-style: normal;
     @media ${({ theme }) => theme.media.large} {
-      margin-bottom: 24px;
+      margin-bottom: 40px;
       font-size: 14px;
     }
   }
