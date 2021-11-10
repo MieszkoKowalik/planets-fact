@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import MobileNavList from "components/molecules/MobileNavList/MobileNavList";
 import HamburgerButton from "components/atoms/HamburgerButton/HamburgerButton";
 import { useContext } from "react/cjs/react.development";

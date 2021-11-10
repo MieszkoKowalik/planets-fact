@@ -24,7 +24,6 @@ const PlanetsProvider = ({ children }) => {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
         setPlanets(data);
       })
       .catch((err) => {

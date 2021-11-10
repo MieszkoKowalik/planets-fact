@@ -25,7 +25,6 @@ const PlanetImage = () => {
       setLoading(true);
     }
   }, [planet, planetId, id, imgId, loading]);
-  console.log(imgId, planetId);
   return (
     <Wrapper planet={planetId}>
       {imgId === "geology" ? (
