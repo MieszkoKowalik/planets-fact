@@ -9,7 +9,10 @@ const DesktopNavigation = () => {
     <Wrapper>
       {planets.map((planet) => (
         <li key={planet.name}>
-          <StyledNavLink to={`${planet.name}/overview`}>
+          <StyledNavLink
+            planet={planet.name}
+            to={`${planet.name.toLowerCase()}/overview`}
+          >
             {planet.name}
           </StyledNavLink>
         </li>

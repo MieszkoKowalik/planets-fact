@@ -64,7 +64,8 @@ export const Tab = styled(NavLink).attrs(({ planet, id }) => ({ planet, id }))`
     border: 1px solid ${({ theme }) => theme.colors.neutralDark};
     color: ${({ theme }) => theme.colors.white};
     transition: background-color 0.2s, border 0.2s;
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: ${({ theme }) => theme.colors.neutralDark};
     }
     &.active {

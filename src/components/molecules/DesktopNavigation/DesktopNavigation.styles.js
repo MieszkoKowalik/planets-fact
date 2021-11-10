@@ -18,7 +18,7 @@ export const Wrapper = styled.ul`
 `;
 
 export const StyledNavLink = styled(NavLink).attrs((props) => ({
-  to: props.to.toLowerCase(),
+  planet: props.planet.toLowerCase(),
 }))`
   color: ${({ theme }) => theme.colors.white};
   display: flex;
@@ -34,11 +34,12 @@ export const StyledNavLink = styled(NavLink).attrs((props) => ({
     position: relative;
     color: ${({ theme }) => theme.colors.neutralLight};
     transition: color 0.15s;
-    &:hover {
+    &:hover,
+    &:focus {
       color: ${({ theme }) => theme.colors.white};
       &::before {
         transform: scaleX(1);
-        background-color: ${({ theme, to }) => theme.colors[to]};
+        background-color: ${({ theme, planet }) => theme.colors[planet]};
       }
     }
 
