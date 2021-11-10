@@ -1,12 +1,11 @@
 import React from "react";
 
 import Tabs from "components/molecules/Tabs/Tabs";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { PlanetsContext } from "providers/PlanetsProviders";
 import { useParams } from "react-router";
 import { Routes } from "react-router";
 import { Route } from "react-router-dom";
-import { useEffect } from "react/cjs/react.development";
 import PlanetInfo from "components/molecules/PlanetInfo/PlanetInfo";
 import PlanetDetails from "components/molecules/PlanetDetails/PlanetDetails";
 import styled from "styled-components";
