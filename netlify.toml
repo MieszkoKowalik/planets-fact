@@ -1,8 +1,4 @@
 [[redirects]]
-  from = "/"
-  to = "/mercury/overview"
-
-[[redirects]]
   from = "/*"
   to = "/"
 	 status = 200
