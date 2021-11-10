@@ -23,7 +23,7 @@ export const Wrapper = styled.ul`
 `;
 
 export const StyledNavLink = styled(NavLink).attrs((props) => ({
-  to: props.to.toLowerCase(),
+  planet: props.planet.toLowerCase(),
 }))`
   color: ${({ theme }) => theme.colors.white};
   display: block;
@@ -42,7 +42,7 @@ export const StyledNavLink = styled(NavLink).attrs((props) => ({
     height: 20px;
     margin-right: 25px;
     border-radius: 50%;
-    background-color: ${({ theme, to }) => theme.colors[to]};
+    background-color: ${({ theme, planet }) => theme.colors[planet]};
   }
   &::after {
     content: url(${Icon});

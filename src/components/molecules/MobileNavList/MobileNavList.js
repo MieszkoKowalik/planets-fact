@@ -9,7 +9,11 @@ const MobileNavList = (props) => {
     <Wrapper {...props}>
       {planets.map((planet) => (
         <li key={planet.name}>
-          <StyledNavLink onClick={props.click} to={planet.name}>
+          <StyledNavLink
+            onClick={props.click}
+            planet={planet.name}
+            to={`${planet.name.toLowerCase()}/overview`}
+          >
             {planet.name}
           </StyledNavLink>
         </li>

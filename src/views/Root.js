@@ -13,7 +13,9 @@ function Root() {
         <PlanetsProvider>
           <MainTemplate>
             <Routes>
-              <Route path=":planet/*" element={<PlanetsSection />} />
+              <Route path=":planet/*" element={<PlanetsSection />}>
+                <Route path=":id" element={<PlanetsSection />}></Route>
+              </Route>
             </Routes>
           </MainTemplate>
         </PlanetsProvider>

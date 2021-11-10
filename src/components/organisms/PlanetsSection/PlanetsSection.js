@@ -45,9 +45,20 @@ const PlanetsSection = () => {
   let layout = (
     <>
       <Tabs />
+
       <Grid>
-        <PlanetImage />
-        <PlanetInfo />
+        <Routes>
+          <Route
+            path=":id"
+            element={
+              <>
+                <PlanetImage />
+                <PlanetInfo />
+              </>
+            }
+          />
+        </Routes>
+
         <PlanetDetails />
       </Grid>
     </>
@@ -55,8 +66,17 @@ const PlanetsSection = () => {
   if (isDisplayMedium) {
     layout = (
       <Grid>
-        <PlanetImage />
-        <PlanetInfo />
+        <Routes>
+          <Route
+            path=":id"
+            element={
+              <>
+                <PlanetImage />
+                <PlanetInfo />
+              </>
+            }
+          />
+        </Routes>
         <Tabs />
         <PlanetDetails />
       </Grid>

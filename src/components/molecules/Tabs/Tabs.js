@@ -20,13 +20,12 @@ const Tabs = () => {
     {
       id: 3,
       name: "surface",
-      path: "surface",
+      path: "geology",
     },
   ];
-
+  if (!currentPath.id) return <Navigate to={tabs[0].path} />;
   return (
     <Wrapper>
-      {!currentPath["*"] && <Navigate to={tabs[0].path} />}
       {tabs.map((tab) => (
         <Tab
           key={tab.id}
