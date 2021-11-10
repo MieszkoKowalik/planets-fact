@@ -8,6 +8,7 @@ export const PlanetsContext = React.createContext({
 const PlanetsProvider = ({ children }) => {
   const [planets, setPlanets] = useState([]);
   const [currentPlanetData, setCurrentPlanetData] = useState({});
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const changeCurrentPlanet = (planetName) => {
     const currentPlanetData = planets.find(
@@ -32,7 +33,13 @@ const PlanetsProvider = ({ children }) => {
   }, []);
   return (
     <PlanetsContext.Provider
-      value={{ planets, currentPlanetData, changeCurrentPlanet }}
+      value={{
+        planets,
+        currentPlanetData,
+        changeCurrentPlanet,
+        isMenuOpen,
+        setIsMenuOpen,
+      }}
     >
       {children}
     </PlanetsContext.Provider>

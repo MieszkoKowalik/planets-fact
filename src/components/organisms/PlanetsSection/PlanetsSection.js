@@ -38,28 +38,32 @@ const Grid = styled.div`
 
 const PlanetsSection = () => {
   const currentPlanet = useParams();
-  const { changeCurrentPlanet, currentPlanetData } = useContext(PlanetsContext);
+  const { changeCurrentPlanet, currentPlanetData, isMenuOpen } =
+    useContext(PlanetsContext);
   const theme = useTheme();
   const isDisplayMedium = useMediaQuery(theme.media.medium);
   let layout = (
     <>
-      <Tabs />
+      {isMenuOpen ? null : (
+        <>
+          <Tabs />
+          <Grid>
+            <Routes>
+              <Route
+                path=":id"
+                element={
+                  <>
+                    <PlanetImage />
+                    <PlanetInfo />
+                  </>
+                }
+              />
+            </Routes>
 
-      <Grid>
-        <Routes>
-          <Route
-            path=":id"
-            element={
-              <>
-                <PlanetImage />
-                <PlanetInfo />
-              </>
-            }
-          />
-        </Routes>
-
-        <PlanetDetails />
-      </Grid>
+            <PlanetDetails />
+          </Grid>
+        </>
+      )}
     </>
   );
   if (isDisplayMedium) {

@@ -2,26 +2,28 @@ import React from "react";
 import { useState } from "react";
 import MobileNavList from "components/molecules/MobileNavList/MobileNavList";
 import HamburgerButton from "components/atoms/HamburgerButton/HamburgerButton";
+import { useContext } from "react/cjs/react.development";
+import { PlanetsContext } from "providers/PlanetsProviders";
 
 const MobileNavigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const { isMenuOpen, setIsMenuOpen } = useContext(PlanetsContext);
   const closeNavigation = () => {
-    setIsOpen(false);
+    setIsMenuOpen(false);
   };
 
   return (
     <nav>
       <HamburgerButton
         onClick={() => {
-          setIsOpen(!isOpen);
+          setIsMenuOpen(!isMenuOpen);
         }}
         id="menubutton"
         aria-haspopup="true"
-        aria-expanded={isOpen}
-        isOpen={isOpen}
+        aria-expanded={isMenuOpen}
+        isOpen={isMenuOpen}
         aria-label="Menu toggle"
       />
-      {isOpen ? (
+      {isMenuOpen ? (
         <MobileNavList
           click={closeNavigation}
           id="menu"
