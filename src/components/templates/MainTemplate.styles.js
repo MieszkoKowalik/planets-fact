@@ -6,4 +6,6 @@ export const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
   background-image: url(${bgStars});
   background-position: center;
+  display: grid;
+  grid-template-rows: auto 1fr;
 `;

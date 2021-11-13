@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { PlanetsContext } from "providers/PlanetsProviders";
 import { Wrapper } from "./MainTemplate.styles";
 import NavBar from "components/organisms/NavBar/NavBar";
+import Loader from "components/molecules/Loader/Loader";
 
 const MainTemplate = ({ children }) => {
   const { planets } = useContext(PlanetsContext);
@@ -11,7 +12,7 @@ const MainTemplate = ({ children }) => {
     <Wrapper>
       <NavBar />
       {/* TODO:Replace with proper loading screen */}
-      {planets.length ? children : <p>Loading...</p>}
+      {planets.length ? children : <Loader></Loader>}
     </Wrapper>
   );
 };

@@ -11,7 +11,7 @@ const DesktopNavigation = () => {
         <li key={planet.name}>
           <StyledNavLink
             planet={planet.name}
-            to={`${planet.name.toLowerCase()}/overview`}
+            to={`${planet.name.toLowerCase()}`}
           >
             {planet.name}
           </StyledNavLink>
