@@ -11,7 +11,6 @@ const MainTemplate = ({ children }) => {
   return (
     <Wrapper>
       <NavBar />
-      {/* TODO:Replace with proper loading screen */}
       {planets.length ? children : <Loader></Loader>}
     </Wrapper>
   );
